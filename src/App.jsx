@@ -1,48 +1,46 @@
-import Card from "./card"
-const foods = [
-  {
-    foodName: "Margherita Pizza",
-    type: "Vegetarian",
-    rating: 4.5,
-    price: 249,
-    img: "https://img.freepik.com/premium-photo/pizza-with-different-toppings-it_915071-17624.jpg",
-    desc: "Classic Margherita pizza with fresh tomatoes, mozzarella cheese, and basil."
-  },
-  {
-    foodName: "Chicken Biryani",
-    type: "Non-Vegetarian",
-    rating: 4.7,
-    price: 299,
-    img: "https://static.vecteezy.com/system/resources/thumbnails/028/536/608/small_2x/flavorful-feast-indulge-in-the-goodness-of-chicken-biryani-generative-ai-photo.jpg",
-    desc: "Flavorful and aromatic chicken biryani with basmati rice and spices."
-  },
-  {
-    foodName: "Caesar Salad",
-    type: "Vegetarian",
-    rating: 4.2,
-    price: 189,
-    img: "https://img.pikbest.com/ai/illus_our/20230414/d774bc3118ba269eb7250d9b375fd7d1.jpg!w700wp",
-    desc: "Fresh Caesar salad with romaine lettuce, croutons, Parmesan cheese, and dressing."
-  }, {
-    foodName: "Paneer Butter Masala",
-    type: "Vegetarian",
-    rating: 4.6,
-    price: 399,
-    img: "https://img.freepik.com/premium-photo/india39s-paneer-butter-masala_410516-47578.jpg",
-    desc: "Creamy paneer butter masala cooked in rich tomato gravy with Indian spices."
-  }
-
-];
-
+import User from "./Components/User";
+const users = [
+    {
+      name: "Sreedhar",
+      profession: "Frontend developer",
+      image: "https://i.pinimg.com/474x/a6/54/00/a65400bec578fe36f9b022ee92681fad.jpg"
+    },
+    {
+      name: "Sumedh",
+      profession: "Actors",
+      image: "https://i.pinimg.com/236x/9d/32/6d/9d326d4b8acb87414fa12ddeaab85f28.jpg"
+    },
+    {
+      name: "Mallika Singh",
+      profession: "Actors",
+      image: "https://i.pinimg.com/736x/e7/05/d9/e705d9560012c1178c61485a4be42b35.jpg"
+    },
+    {
+      name: "SarahKim",
+      profession: "Content Writer",
+      image: "https://img.freepik.com/premium-photo/natural-real-person-portrait-closeup-woman-girl-female-outside-nature-forest-artistic-edgy-cute-pretty-face-ai-generated_590464-133624.jpg"
+    },
+    {
+      name: "DavidBrown",
+      profession: "Project Manager",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbxb6u33rRWrOZTZ7RmVCeSGDmjNYA20dTA&s"
+    },
+    {
+      name: "EmilyDavis",
+      profession: "Data Scientist",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69Dnz-2iGhLNaCLI2wBki0_h0DGPD8LwJGH7myah4nKI653zdi0437VZNC0d0eiAT7Y8&usqp=CAU"
+    }
+  ];
+  
 function App(){
-  return(
-    <>
-     <div className="flex gap-2 m-2 flex-wrap">
-      {
-        foods.map((item)=><Card img={item.img} foodName={item.foodName} rating={item.rating} desc={item.desc} price={item.price}/>)
-      }
-     </div>
-    </>
-  )
+    return(
+        <>
+       <div className=" border bg-red-100">
+        {
+            users.map((user)=><User name={user.name} profession={user.profession} img={user.image}/>)
+        }
+       </div>
+        </>
+    )
 }
 export default App
